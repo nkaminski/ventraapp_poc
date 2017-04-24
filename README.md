@@ -7,8 +7,13 @@ Full documentation is located under the `doc` directory, and all PoC code is loc
 Required python3 libraries for PoC code: falcon, requests and gunicorn(or other WSGI server, only needed for app API server).
 
 Running the PoC code: 
-    Metadata and security code downloader: python3 v_client.py
-    App API server: gunicorn -b :443 -w3 --certfile=<your_cert> --keyfile=<your_privkey> app_server:api
+    Metadata and security code downloader: 
+    
+        python3 v_client.py
+    
+    App API server: 
+    
+        gunicorn -b :443 -w3 --certfile=<your_cert> --keyfile=<your_privkey> app_server:api
 
 # Timeline
   * 6/24/16 - Ventra v. 1.2.1.39 released and patches 1st vulnerabilty discussed in report.

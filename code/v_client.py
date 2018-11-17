@@ -2,12 +2,12 @@ import random
 import time
 import hashlib
 import requests
+import pprint
 from binascii import hexlify, unhexlify
 
-
-#url = "https://ventra.transitsherpa.com/v2/rider/sync"
-urlbase = "https://52.0.139.197"
-headerbase = {'x-gs-user-agent': '{"appVersion":"1.1.1","osVersion":"4.4.4","osType":"32bit","deviceName":"android","deviceModel":"Nexus 4","devicePlatform":"Android"}', 'content-type': 'application/json', 'x-gs-scope': 'ventra-prod'}
+#Change to current server IP if DNS is being spoofed
+urlbase = "https://ventra.transitsherpa.com"
+headerbase = {'x-gs-user-agent': '{"appVersion":"1.3.4936","osVersion":"8.0.0","osType":"32bit","deviceName":"android","deviceModel":"Nexus 6P" ,"devicePlatform":"Android"}', 'content-type': 'application/json', 'x-gs-scope': 'ventra-prod'}
 devid = b'1234'
 
 def securitycodes(deviceuuid):
@@ -37,5 +37,5 @@ def agencysync(deviceuuid):
 
 
 if __name__=='__main__':
-    print(securitycodes(devid))
-    print(agencysync(devid))
+    pprint.pprint(securitycodes(devid))
+    pprint.pprint(agencysync(devid))
